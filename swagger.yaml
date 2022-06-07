@@ -1,0 +1,139 @@
+openapi: 3.0.0
+info:
+  title: indra-test
+  version: 1.0.0
+servers:
+  - url: https://2dqp1ou7v4.execute-api.us-east-1.amazonaws.com
+paths:
+  /user:
+    post:
+      tags:
+        - General
+      summary: create user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: cesar
+                lastName: jimenez
+                dni: 123443232
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+        '500':
+          description: Error response
+          content:
+            application/json: {}
+  /user/delete/{userId}:
+    delete:
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+            minimum: 1
+            default: e28debad-adfb-46f1-bf2d-6756fcc048b0
+          description: id user
+      tags:
+        - General
+      summary: delete user
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+        '500':
+          description: Error response
+          content:
+            application/json: {}
+  /user/all:
+    get:
+      tags:
+        - General
+      summary: get all users
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+        '500':
+          description: Error response
+          content:
+            application/json: {}
+  /user/update/{userId}:
+    put:
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+            minimum: 1
+            default: e28debad-adfb-46f1-bf2d-6756fcc048b0
+          description: id user
+      tags:
+        - General
+      summary: update user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                lastName: carbajal2022
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+        '500':
+          description: Error response
+          content:
+            application/json: {}
+  /user/get/{userId}:
+    get:
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+            minimum: 1
+            default: e28debad-adfb-46f1-bf2d-6756fcc048b0
+          description: id user
+      tags:
+        - General
+      summary: get user
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /swapi/{swapiId}:
+    get:
+      parameters:
+        - in: path
+          name: swapiId
+          required: true
+          schema:
+            type: string
+            minimum: 1
+            default: 1
+          description: id swapi
+      tags:
+        - General
+      summary: swapi
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+        '500':
+          description: Error response
+          content:
+            application/json: {}

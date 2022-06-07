@@ -1,0 +1,21 @@
+{
+  "name": "indra-test-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.17.1",
+    "node-polyglot": "^2.4.2",
+    "serverless-http": "^2.7.0",
+    "swagger-ui-express": "^4.4.0",
+    "swapi-node": "^0.7.0",
+    "uuid": "^8.3.2",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
