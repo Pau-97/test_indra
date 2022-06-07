@@ -23,8 +23,7 @@ To review the documentation you must enter the following link: __https://2dqp1ou
 ## UNIT TEST
 The test folder has the unit tests with jest : __TEST/SWAPPI.TEST__ AND __TEST/USER.TEST__
 
-
-
+## DOCUMENTATION
 To create a User and save this information in DynamoDB, the route is: __BASE_URL/user__ the method for this route is POST and you have to send a body, similar like this:
 ```
 {
